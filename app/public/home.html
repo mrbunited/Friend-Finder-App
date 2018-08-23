@@ -65,11 +65,11 @@
             // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
             $.ajax({ url: currentURL + "/api/friends-list", method: "GET" })
                 .done(function (friendData) {
-                    // Here we are logging the URL so we have access to it for troubleshooting
+                    
                     console.log("------------------------------------");
                     console.log("URL: " + currentURL + "/api/frinds-list");
                     console.log("------------------------------------");
-                    // Here we then log the NYTData to console, where it will show up as an object.
+                   
                     console.log(friendData);
                     console.log("------------------------------------")
                     // Loop through and display each of the customers
@@ -85,19 +85,7 @@
                     }
                 });
         }
-        // This function resets all of the data in our tables. This is intended to let you restart a demo.
-        function clearTable() {
-            var currentURL = window.location.origin;
-            $.ajax({ url: currentURL + "/api/clear", method: "POST" })
-        }
-        $("#clear").on('click', function () {
-            alert("Clearing...");
-            clearTable();
-            // Refresh the page after data is cleared
-            location.reload();
-        })
-        // Run Queries!
-        // ==========================================
+
         runFriend();
 
     </script>
