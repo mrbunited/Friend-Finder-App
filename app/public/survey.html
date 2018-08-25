@@ -202,14 +202,11 @@
         </footer>
     
         <script type="text/javascript">
-            $(document).ready(function() {
-                // $('select').material_select();
-                $('.modal').modal();
-            });
-            // Activate submit button
+
+
             $('#submitButton').on('click', function(event) {
                 event.preventDefault();
-      console.log("Logging button function");
+    //   console.log("Logging button function");
                 var userInfo = {
                     name: $('#userName').val().trim(),
                     photo: $('#userPic').val().trim(),
@@ -228,7 +225,7 @@
                 };
 
                 $.post('/api/friends', userInfo)
-                  .done(function(data) {
+                  .done(function() {
 
 
                   });
